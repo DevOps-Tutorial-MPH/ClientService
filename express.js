@@ -6,7 +6,7 @@ app.use(express.json({extended: false}));
 app.use(express.static('./css'));
 app.set('view engine', 'ejs');
 app.set('views', './views');
-app.listen(3000,()=>{
+app.listen(process.env.PORT || 3000,()=>{
     console.log('server is start at port 3000');
 })
 app.get('/', (req,res) =>{      
